@@ -12,6 +12,7 @@ creatd by: Hiva Hakimzadeh 06/01/2022
 using namespace std;
 char gamer='X';
 char matrix[3][3]={'1','2','3','4','5','6','7','8','9'};
+
 //this function draws a chart with 3 rows and colunms each numbered from 1 through 9
 void Draw()
 {
@@ -75,15 +76,17 @@ void prompt()
 int check(int player)
 {
     int count=0;
-    for(int i=0;i<3;i++)
+    int i=0;
+    for(int j=0;j<3;j++)
     {
-        for(int j=0;j<3;j++)
-        {
-            if(matrix[i][j] ==player && matrix[i+1][j]==player && matrix[i+2][j]==player)
-                count++;
-            else if(matrix[i][j] ==player && matrix[i][j+1] ==player && matrix[i][j+2] ==player)
-                count++;
-        }
+        if(matrix[i][j] ==player && matrix[i+1][j]==player && matrix[i+2][j]==player)
+          count++;
+    }
+    for (int b=0;b<3;b++)
+    {
+        int c =0;
+        if(matrix[b][c] ==player && matrix[b][c+1]==player && matrix[b][c+2]==player)
+          count++;
     }
     
    if(matrix[0][0] ==player && matrix[1][1]==player && matrix[2][2]==player)
@@ -114,11 +117,11 @@ bool Gameover()
         {
             if(matrix[a][b] !='X' &&  matrix[a][b] !='O' )
             {
-             over=false;
-             break;
+            over=false;
+            break;
             }
             else
-            continue;  
+            continue;
         }
     }
     return over;
