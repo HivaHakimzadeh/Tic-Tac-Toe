@@ -1,0 +1,8 @@
+# Tic-Tac-Toe
+Tic Tac Toe is a 2 player game where one player plays the letter O and one plays the letter X. 
+Each player will only score if they be able to occupy at least one column, row, or a diagonal
+line with their letter(X or O). Tic Tac Toe Game: The program prompts the first user who is on 
+default "player X" to enter the field number which the program replaces with the letter X, and 
+then the program prompts the second player who is "player O" to do the same. At the end the program
+will count the number of rows, columns, and/or diagonal lines that is  filled with all Os or Xs, and 
+returns the scores of each player.
